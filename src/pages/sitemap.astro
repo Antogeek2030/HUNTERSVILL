@@ -1,0 +1,55 @@
+---
+/**
+ * Human-readable HTML sitemap.
+ * Helps users and gives crawlers another clear list of important URLs.
+ * XML sitemap is still the primary one at /sitemap-index.xml
+ */
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pages = [
+	{ href: '/', label: 'Home', note: 'AC repair & installation in Huntersville' },
+	{ href: '/contact', label: 'Contact Us', note: 'Quote form & map' },
+	{ href: '/service-areas', label: 'Service Areas', note: 'Huntersville & Lake Norman' },
+	{ href: '/services/ac-repair', label: 'AC Repair', note: 'Diagnose & fix cooling issues' },
+	{ href: '/services/ac-installation', label: 'AC Installation', note: 'New system install' },
+	{ href: '/services/emergency-ac-repair', label: 'Emergency AC Repair', note: 'Same-day help' },
+	{ href: '/services/maintenance', label: 'Maintenance Plans', note: 'Seasonal tune-ups' },
+	{ href: '/services/duct-cleaning', label: 'Duct Cleaning', note: 'Air quality & airflow' },
+	{ href: '/blog', label: 'Blog', note: 'Tips & guides' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Sitemap | ${SITE_TITLE}`} description="HTML sitemap of all main pages on the site." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>Sitemap</h1>
+				<p>All main pages on this site. For the machine-readable sitemap see <a href="/sitemap-index.xml" style="color: #fff; text-decoration: underline;">/sitemap-index.xml</a>.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					{pages.map((p) => (
+						<li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200);">
+							<a href={p.href} style="font-weight: 700; font-size: 1.1rem;">{p.label}</a>
+							<span style="display: block; color: var(--gray-500); font-size: 0.95rem;">{p.note}</span>
+						</li>
+					))}
+				</ul>
+				<p style="margin-top: 2rem; font-size: 0.95rem; color: var(--gray-500);">
+					Also available: <a href="/rss.xml">RSS feed</a> · <a href="/robots.txt">robots.txt</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>
