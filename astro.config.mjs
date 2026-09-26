@@ -8,7 +8,7 @@ import cloudflare from "@astrojs/cloudflare";
 // https://astro.build/config
 export default defineConfig({
 	// IMPORTANT: set this to your real live domain (with https)
-	site: "https://huntersvilleacrepair.com",
+	site: "https://acrepairhuntersvillenc.com/",
 	integrations: [
 		mdx(),
 		sitemap({
