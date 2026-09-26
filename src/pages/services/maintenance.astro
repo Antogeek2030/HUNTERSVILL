@@ -1,0 +1,44 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`AC Maintenance Plans | ${SITE_TITLE}`} description="Seasonal AC tune-ups that extend equipment life and prevent breakdowns in Huntersville, NC." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>Maintenance Plans</h1>
+				<p>Seasonal tune-ups that keep your system efficient and reliable.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<h2>Prevent Problems Before They Start</h2>
+				<p>
+					Regular maintenance is the single best way to avoid mid-summer breakdowns, lower energy bills, and extend the life of your equipment.
+					Our tune-ups follow manufacturer recommendations and include a thorough checklist.
+				</p>
+				<ul>
+					<li>Clean or replace filters</li>
+					<li>Check refrigerant levels and pressures</li>
+					<li>Inspect electrical connections and capacitors</li>
+					<li>Clean outdoor coil and condensate drain</li>
+					<li>Test thermostat and safety controls</li>
+					<li>Measure temperature differential</li>
+				</ul>
+				<p style="margin-top: 1.75rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline-dark" style="margin-left: 0.75rem;">Schedule Service</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>

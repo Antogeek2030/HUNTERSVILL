@@ -1,0 +1,52 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`AC Repair in Huntersville, NC | ${SITE_TITLE}`} description="Stop cooling problems and extend the life of your AC with expert local repairs in Huntersville." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>AC Repair in Huntersville</h1>
+				<p>Stop cooling problems and extend the life of your system with expert local repairs.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<h2>Reliable AC Repair for Lake Norman Homes</h2>
+				<p>
+					Small AC problems rarely stay small. A failing capacitor, low refrigerant, or clogged condensate line can lead to
+					complete system failure, frozen coils, and costly water damage if ignored. We provide prompt, professional
+					AC repairs tailored to the heat and humidity of North Carolina.
+				</p>
+				<h2>Common Repairs We Handle</h2>
+				<ul>
+					<li>No cooling or weak airflow</li>
+					<li>Strange noises (rattling, buzzing, grinding)</li>
+					<li>Refrigerant leaks and recharge</li>
+					<li>Capacitor, contactor, and fan motor replacement</li>
+					<li>Thermostat issues</li>
+					<li>Frozen evaporator coils</li>
+					<li>Condensate drain clogs and overflow</li>
+				</ul>
+				<h2>Our Repair Process</h2>
+				<p>
+					We start with a clear inspection and explanation of what we find. You receive a straightforward quote with no pressure.
+					Once approved, our technician completes the work carefully, tests the system, and stands behind the repair.
+				</p>
+				<p style="margin-top: 1.75rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline-dark" style="margin-left: 0.75rem;">Request a Quote</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>

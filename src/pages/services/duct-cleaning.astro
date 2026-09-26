@@ -1,0 +1,42 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Duct Cleaning in Huntersville, NC | ${SITE_TITLE}`} description="Professional duct cleaning to improve indoor air quality and system performance." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>Duct Cleaning</h1>
+				<p>Cleaner air and better system performance.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<h2>Breathe Easier at Home</h2>
+				<p>
+					Over time, dust, pet dander, pollen, and debris build up inside your ductwork. This reduces airflow, strains your AC,
+					and can circulate allergens throughout the house. Professional duct cleaning restores cleaner air and efficiency.
+				</p>
+				<ul>
+					<li>Whole-home duct system cleaning</li>
+					<li>Supply and return register cleaning</li>
+					<li>Inspection of accessible ductwork</li>
+					<li>Optional sanitizing treatments</li>
+				</ul>
+				<p style="margin-top: 1.75rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline-dark" style="margin-left: 0.75rem;">Request a Quote</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>

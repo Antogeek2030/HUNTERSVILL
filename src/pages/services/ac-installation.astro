@@ -1,0 +1,45 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`AC Installation in Huntersville, NC | ${SITE_TITLE}`} description="Complete AC system design and installation with energy-efficient units for North Carolina summers." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>AC Installation</h1>
+				<p>New systems sized and installed correctly for comfort and efficiency.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<h2>Professional AC Installation for Huntersville Homes</h2>
+				<p>
+					A properly sized and installed air conditioner makes all the difference in comfort, energy bills, and equipment lifespan.
+					We design systems for the unique climate of the Lake Norman region and install them to manufacturer specifications.
+				</p>
+				<h2>What We Offer</h2>
+				<ul>
+					<li>Load calculation and system sizing</li>
+					<li>High-efficiency heat pumps and central AC</li>
+					<li>Ductwork evaluation and improvements</li>
+					<li>Smart thermostat integration</li>
+					<li>Removal and responsible disposal of old equipment</li>
+					<li>Manufacturer warranties and our workmanship guarantee</li>
+				</ul>
+				<p style="margin-top: 1.75rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline-dark" style="margin-left: 0.75rem;">Request a Quote</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>

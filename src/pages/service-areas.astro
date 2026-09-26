@@ -1,0 +1,59 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL, ADDRESS } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Service Areas | ${SITE_TITLE}`} description="Proudly serving Huntersville, NC and the surrounding Lake Norman communities with expert AC repair and installation." />
+	</head>
+	<body>
+		<Header />
+
+		<section class="page-hero">
+			<div class="container">
+				<h1>Service Areas</h1>
+				<p>Proudly serving Huntersville and the surrounding Lake Norman communities.</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container content-block">
+				<h2>Where We Work</h2>
+				<p>
+					Huntersville AC Repair Experts is a local company focused on residential cooling throughout the Lake Norman region.
+					We understand the unique challenges of North Carolina summers — high humidity, intense heat, and sudden storms —
+					and we service and install systems accordingly.
+				</p>
+
+				<h2 style="margin-top: 2rem;">Primary Service Areas</h2>
+				<ul>
+					<li><strong>Huntersville, NC</strong> — Our home base. Full service for all neighborhoods including Birkdale, Northcross, and Torrence Creek.</li>
+					<li><strong>Cornelius, NC</strong></li>
+					<li><strong>Davidson, NC</strong></li>
+					<li><strong>Mooresville, NC</strong></li>
+					<li><strong>Denver, NC</strong></li>
+					<li><strong>Charlotte (north / University area)</strong></li>
+					<li><strong>Lake Norman communities</strong></li>
+				</ul>
+
+				<h2 style="margin-top: 2rem;">Not Sure If We Cover Your Area?</h2>
+				<p>
+					If you live near Huntersville and need AC repair, installation, or maintenance, give us a call.
+					We often serve additional nearby communities and will let you know quickly if we can help.
+				</p>
+				<p style="margin-top: 1.5rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline-dark" style="margin-left: 0.75rem;">Contact Us</a>
+				</p>
+
+				<p style="margin-top: 2rem; color: var(--gray-500); font-size: 0.95rem;">Our office location: {ADDRESS}</p>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

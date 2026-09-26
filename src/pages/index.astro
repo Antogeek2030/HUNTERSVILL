@@ -1,0 +1,104 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, PHONE, PHONE_TEL } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+
+		<section class="hero">
+			<div class="container">
+				<h1>Huntersville AC Repair &amp; Installation Experts</h1>
+				<p>
+					Trusted local technicians serving Huntersville and Lake Norman homeowners.
+					Fast response, honest pricing, and cooling systems that keep your home comfortable year-round.
+				</p>
+				<div class="hero-actions">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call Us: {PHONE}</a>
+					<a href="/contact" class="btn btn-outline">Get a Quote</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="services">
+			<div class="container text-center">
+				<h2>Our Core AC Services</h2>
+				<p class="lead">From emergency repairs to full system replacements, we keep Huntersville homes cool and efficient.</p>
+				<div class="cards">
+					<div class="card">
+						<h3>AC Repair</h3>
+						<p>Diagnose and fix cooling issues, strange noises, weak airflow, and refrigerant problems before they become costly failures.</p>
+						<a href="/services/ac-repair">Learn more →</a>
+					</div>
+					<div class="card">
+						<h3>AC Installation</h3>
+						<p>Complete system design and installation with energy-efficient units sized correctly for North Carolina summers.</p>
+						<a href="/services/ac-installation">Learn more →</a>
+					</div>
+					<div class="card">
+						<h3>Emergency AC Repair</h3>
+						<p>Same-day response when your system fails in the heat. Temporary cooling solutions and permanent repairs to restore comfort fast.</p>
+						<a href="/services/emergency-ac-repair">Learn more →</a>
+					</div>
+					<div class="card">
+						<h3>Maintenance Plans</h3>
+						<p>Seasonal tune-ups that extend equipment life, improve efficiency, and help prevent unexpected breakdowns.</p>
+						<a href="/services/maintenance">Learn more →</a>
+					</div>
+					<div class="card">
+						<h3>Duct Cleaning</h3>
+						<p>Remove dust, allergens, and debris from your ductwork to improve indoor air quality and system performance.</p>
+						<a href="/services/duct-cleaning">Learn more →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="container text-center">
+				<h2>What Huntersville Homeowners Say</h2>
+				<p class="lead">Real feedback from local customers who trusted us with their cooling systems.</p>
+				<div class="cards">
+					<div class="testimonial">
+						<blockquote>
+							“Our AC died on a 95° day. They came out the same afternoon, diagnosed a failed capacitor, and had us cool again before dinner. Fair price and very professional.”
+						</blockquote>
+						<cite>Sarah M. <span class="loc">Huntersville, NC</span></cite>
+					</div>
+					<div class="testimonial">
+						<blockquote>
+							“Needed a full system replacement. They explained options clearly, didn’t pressure us, and the new unit is quieter and more efficient. Highly recommend.”
+						</blockquote>
+						<cite>James T. <span class="loc">Cornelius, NC</span></cite>
+					</div>
+					<div class="testimonial">
+						<blockquote>
+							“Got three quotes for maintenance. These guys were the most thorough and straightforward. No surprises on the invoice.”
+						</blockquote>
+						<cite>Michelle R. <span class="loc">Davidson, NC</span></cite>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta-band">
+			<div class="container">
+				<h2>Ready for a Free AC Quote?</h2>
+				<p>Local, licensed, and insured. Serving Huntersville and nearby Lake Norman communities.</p>
+				<div class="hero-actions">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call {PHONE}</a>
+					<a href="/contact" class="btn btn-outline">Request a Quote</a>
+				</div>
+			</div>
+		</section>
+
+		<Footer />
+	</body>
+</html>

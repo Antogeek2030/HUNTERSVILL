@@ -1,0 +1,42 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, PHONE, PHONE_TEL } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Emergency AC Repair in Huntersville, NC | ${SITE_TITLE}`} description="Same-day emergency AC repair when your system fails in the heat. Fast response in Huntersville and Lake Norman." />
+	</head>
+	<body>
+		<Header />
+		<section class="page-hero">
+			<div class="container">
+				<h1>Emergency AC Repair</h1>
+				<p>Fast response when your cooling system fails in the heat.</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container content-block">
+				<h2>When You Need Cooling Now</h2>
+				<p>
+					North Carolina summers are no joke. When your AC stops working on a 95°+ day, you need help fast.
+					We prioritize emergency calls and aim for same-day service whenever possible.
+				</p>
+				<h2>What to Expect</h2>
+				<ul>
+					<li>Rapid phone triage and scheduling</li>
+					<li>On-site diagnosis and clear options</li>
+					<li>Temporary cooling measures when needed</li>
+					<li>Permanent repair the same visit when parts are available</li>
+				</ul>
+				<p style="margin-top: 1.75rem;">
+					<a href={`tel:${PHONE_TEL}`} class="btn btn-primary">Call Now: {PHONE}</a>
+				</p>
+			</div>
+		</section>
+		<Footer />
+	</body>
+</html>
